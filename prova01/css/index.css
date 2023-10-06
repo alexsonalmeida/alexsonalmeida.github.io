@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+* {
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body {
+    background-color: #f0eff9;
+    font-family: Inter, sans-serif;
+}
+
+.conteiner-site {
+    display: flex;
+}
+
+.loader {
+    width: 48px; /*largura do spinner*/
+    height: 48px; /*altura do spinner*/
+    border: 5px solid #000; /*borda do spinner*/
+    border-bottom-color: transparent; /*borda para dar um corte no spinner e não deixar um circulo*/
+    border-radius: 50%; /*arrendodamento do spinner para ficar circular*/
+    display: inline-block; /*tratar o elmento span como bloco*/
+    box-sizing: border-box; /*tamanho do span levara em consideracao os paddings, bordas e margins*/
+    animation: rotation 1s linear infinite; /*chamada da animaca e detalhes, como cer infinito*/
+    }
+
+    @keyframes rotation { /*definicao da animacao*/
+    0% {
+        transform: rotate(0deg); /*girará do ponto 0*/
+    }
+    100% {
+        transform: rotate(360deg); /*girará até o ponto 360º, dando uma votlta completa*/
+    }
+} 
+
+.navbar {
+    background-color: #083b5d;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+}
+
+.navbar-item {
+    cursor: pointer;
+    background-color: #3498db;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.navbar-item:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-button {
+    background-color: #3498db;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+}
+
+.dropdown-button:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.dropdown:active .dropdown-content {
+    display: block;
+}
+
+.aside-menu {
+    background-color: #032135;
+    height: 1200px;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 12px 0px;
+}
+
+.aside-button {
+    background-color: transparent;
+    padding: 8px 0px;
+    border: none;
+    color: #f9f9f9;
+    cursor: pointer;
+}
+.aside-button:hover {
+    background-color: #07395b;
+}
+
+.main {
+    height: 1200px;
+    width: 80vw;
+    padding: 0px 24px;
+}
+
+.content {
+    margin-top: 12px;
+}
+
+.image-content {
+    width: 200px;
+    height: 150px;
+    border-radius: 8px;
+}
+
+.content h2 {
+    margin-bottom: 12px;
+}
+
+.content p {
+    margin-bottom: 8px;
+}
+
+.main span {
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    .conteiner-site {
+        flex-direction: column;
+    }
+    .aside-menu {
+        width: 100vw;
+        height: min-content;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .aside-button {
+        background-color: transparent;
+        padding: 8px 8px;
+        border: none;
+        color: #f9f9f9;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}
